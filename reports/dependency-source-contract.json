@@ -1,0 +1,12 @@
+{
+  "pipeline_commit": "65f0154ed776cd26c224254aa57b379137f28b0d",
+  "mathlib_commit": "5e043698502894993991089b2dd893867c0db5c2",
+  "source_requirements": {
+    "schema_version": 1,
+    "module_required": true,
+    "maximum_lines": 10000,
+    "files_checked": 17
+  },
+  "metadata": "pass",
+  "comparator_config": "pass"
+}

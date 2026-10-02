@@ -37,8 +37,8 @@ Selected research results:
 - `HartReny.iid_revenue_nonmonotonicity`: marginal and product dominance
   together with strict optimal-revenue decrease.
 
-The pinned toolchain is Lean `v4.35.0-rc3`, with current Mathlib commit
-`19cdde90293121f0047bb385278520a5cb5392c0`. Build with `lake build`.
+The pinned toolchain is Lean `v4.35.0-rc3`, with Mathlib commit
+`5e043698502894993991089b2dd893867c0db5c2`. Build with `lake build`.
 Run the authored-declaration audit with `lake env lean scripts/Audit.lean`.
 `scripts/generate_certificates.py` deterministically transcribes the supplied
 JSON; it does not prove anything or invoke a solver. Lean checks every

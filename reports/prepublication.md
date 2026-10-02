@@ -1,5 +1,10 @@
 # Prepublication checks
 
+This is the historical record for the initial candidate
+`a1ae211c429d7fdf1b69cddb0556293b1c4020b3`. The subsequent dependency
+adjustment is documented in renderer-dependency-diagnostic.md and the
+dependency review reports; exact-candidate hosted results are separate.
+
 The complete library and Solution compile with Lean v4.35.0-rc3 and Mathlib
 19cdde90293121f0047bb385278520a5cb5392c0. Both exact dual certificates,
 global IC/IR, arbitrary-competitor bounds, exact attained revenues, both
