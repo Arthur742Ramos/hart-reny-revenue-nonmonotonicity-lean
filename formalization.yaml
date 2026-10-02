@@ -1,0 +1,93 @@
+version: "v0.4"
+project:
+  name: "Hart–Reny iid two-good optimal revenue nonmonotonicity"
+  description: >-
+    A Lean/Mathlib proof of Hart–Reny Example E2 and Proposition 9. Two explicit
+    finite marginals and their iid products are ordered by first-order
+    stochastic dominance, while optimal revenue over all globally IC/IR
+    mechanisms on nonnegative real two-good valuations strictly decreases.
+    A globally defined menu mechanism attains both exact optima. Rational
+    primal data and sparse dual certificates are checked in Lean over
+    arbitrary real allocations and payments.
+  authors:
+    - "Arthur Freitas Ramos"
+    - "David Barros Hulak"
+    - "Ruy Jose Guerra Barretto de Queiroz"
+  responsible_maintainers:
+    - "Arthur Freitas Ramos"
+    - "David Barros Hulak"
+    - "Ruy Jose Guerra Barretto de Queiroz"
+  license: "Apache-2.0"
+classification:
+  arxiv: ["econ.TH", "cs.GT", "math.OC"]
+  msc2020: ["91B26", "91A80", "90C05", "03B35"]
+sources:
+  - title: "Maximal Revenue with Multiple Goods: Nonmonotonicity and Other Observations"
+    authors: ["Sergiu Hart", "Philip J. Reny"]
+    id: "https://math.huji.ac.il/~hart/papers/monot-m-20131121.pdf"
+    type: "paper"
+    location: "November 21, 2013 manuscript, Example E2, Proposition 9, Figure 2, printed pages 17–19"
+    relationship: "formalizes"
+    note: >-
+      The support, priors, menu and exact revenue values follow this source.
+      The formal proof supplies exact weak-duality certificates and a global
+      menu extension in place of trusting the source's Maple calculation.
+status:
+  scope: >-
+    The valuation domain is the full nonnegative real quadrant. A feasible
+    mechanism has real payments, allocations in [0,1]^2, and global IC and IR.
+    Revenue is the finite expectation under the displayed iid atomic prior.
+    Optimal revenue is the supremum of revenue over all such globally feasible
+    mechanisms. The common menu mechanism maximizes utility, then payment,
+    includes the outside option, and attains both stated suprema. All globally
+    feasible competitors are bounded by real weak duality. Monotone couplings
+    establish marginal and product dominance for every monotone test function.
+    Mechanism uniqueness and a new mathematical counterexample are not claimed.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: []
+  main_results:
+    - "HartReny.exact_global_optima"
+    - "HartReny.exact_optimal_revenues"
+    - "HartReny.iid_revenue_nonmonotonicity"
+automation:
+  methods:
+    - method: "agent"
+      models: ["GPT-6"]
+      framework: "Lean 4 and Mathlib"
+      tool_setup: "Exact finite case analysis, norm_num, ring, linarith, and kernel-checked rational certificate identities; no native_decide or optimization solver in the proofs."
+      prompting_notes: "Prove unrestricted global optimality, including menu extension and arbitrary competitor restriction, for the supplied exact E2 certificate."
+  notes: "Separate read-only agents performed mathematical and exact-source reviews. These are agent reviews, not external human peer review. Platform gates are reported separately."
+fidelity:
+  divergences: >-
+    Finite atomic expectations replace measure-integral notation. The supremum
+    still ranges over all globally IC/IR real mechanisms. The source's Maple
+    optimality calculation is replaced by exact rational dual witnesses whose
+    weak-duality consequences are proved for arbitrary real unknowns. Neither
+    off-support uniqueness nor an equivalence theorem for general measures is
+    asserted.
+review:
+  status: "agent-reviewed"
+  reviewers:
+    - "Independent mathematical review agent"
+    - "Independent exact-source review agent"
+  notes: "See reports/mathematical-review.md and reports/source-review.md. Compilation, axiom audit, rendering and official mechanical preflight have their own reports."
+alignment:
+  namespace: "HartReny"
+  statements:
+    - source: "Example E2 exact optimal revenues"
+      lean: "HartReny.exact_global_optima"
+      module: "HartReny.Proof"
+      status: "proved"
+      note: "A common global mechanism attains both revenues; all global competitors satisfy the upper bounds."
+    - source: "Example E2 exact optimum fractions and strict reversal"
+      lean: "HartReny.exact_optimal_revenues"
+      module: "HartReny.Proof"
+      status: "proved"
+      note: "Both unrestricted suprema and the positive gap 3752/20030625."
+    - source: "Proposition 9"
+      lean: "HartReny.iid_revenue_nonmonotonicity"
+      module: "HartReny.Proof"
+      status: "proved"
+      note: "Marginal and iid product stochastic dominance together with strict optimal-revenue decrease."
+acknowledgements: "Sergiu Hart and Philip J. Reny for the source result; Lean and Mathlib."

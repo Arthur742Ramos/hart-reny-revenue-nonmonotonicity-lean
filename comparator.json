@@ -1,0 +1,11 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "HartReny.exact_global_optima",
+    "HartReny.exact_optimal_revenues",
+    "HartReny.iid_revenue_nonmonotonicity"
+  ],
+  "definition_names": [],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"]
+}

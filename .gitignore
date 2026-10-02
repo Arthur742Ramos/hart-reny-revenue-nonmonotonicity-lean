@@ -1,0 +1,9 @@
+.lake/
+.cache/
+.library-transfer/
+*.olean
+*.ilean
+*.trace
+reports/local-*.log
+artifacts/
+/research/

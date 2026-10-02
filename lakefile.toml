@@ -1,0 +1,17 @@
+name = "HartReny"
+version = "0.1.0"
+defaultTargets = ["HartReny", "Challenge", "Solution"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "19cdde90293121f0047bb385278520a5cb5392c0"
+
+[[lean_lib]]
+name = "HartReny"
+
+[[lean_lib]]
+name = "Challenge"
+
+[[lean_lib]]
+name = "Solution"

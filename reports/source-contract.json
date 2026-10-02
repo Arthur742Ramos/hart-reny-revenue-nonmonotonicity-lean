@@ -1,0 +1,44 @@
+{
+  "pipeline_commit": "65f0154ed776cd26c224254aa57b379137f28b0d",
+  "source_requirements": {
+    "schema_version": 1,
+    "module_required": true,
+    "maximum_lines": 10000,
+    "files_checked": 17
+  },
+  "metadata": "pass",
+  "provenance": {
+    "result_origin": "source-based",
+    "repository_role": "substantive-development",
+    "responsible_maintainers": [
+      {
+        "name": "Arthur Freitas Ramos"
+      },
+      {
+        "name": "David Barros Hulak"
+      },
+      {
+        "name": "Ruy Jose Guerra Barretto de Queiroz"
+      }
+    ],
+    "mathematical_sources": [
+      {
+        "title": "Maximal Revenue with Multiple Goods: Nonmonotonicity and Other Observations",
+        "authors": [
+          {
+            "name": "Sergiu Hart"
+          },
+          {
+            "name": "Philip J. Reny"
+          }
+        ],
+        "relationship": "formalizes",
+        "identifier": "https://math.huji.ac.il/~hart/papers/monot-m-20131121.pdf",
+        "location": "November 21, 2013 manuscript, Example E2, Proposition 9, Figure 2, printed pages 17\u201319",
+        "note": "The support, priors, menu and exact revenue values follow this source. The formal proof supplies exact weak-duality certificates and a global menu extension in place of trusting the source's Maple calculation.",
+        "type": "paper"
+      }
+    ],
+    "related_formalizations": []
+  }
+}
